@@ -3,8 +3,6 @@ import { Sun, Moon, Linkedin, Github, ChevronDown, ChevronUp } from "lucide-reac
 import emailjs from "@emailjs/browser";
 import { useRef, useState, useEffect } from "react";
 import avatar from "./avatar.png";
-import { FaPython, FaJava, FaJsSquare, FaReact, FaNodeJs, FaDocker, FaGithub } from "react-icons/fa";
-import { SiMongodb, SiPostgresql, SiSpringboot, SiGooglecloud, SiKubernetes, SiMysql, SiOracle, SiPytorch, SiTensorflow, SiScikitlearn, SiCplusplus, SiPhp } from "react-icons/si";
 import "./App.css";
 
 export default function Portfolio() {
@@ -13,7 +11,6 @@ export default function Portfolio() {
   const [activeSection, setActiveSection] = useState(null);
   const [expanded, setExpanded] = useState({});
 
-  
   useEffect(() => {
     document.documentElement.classList.toggle("dark", isDark);
   }, [isDark]);
@@ -21,17 +18,6 @@ export default function Portfolio() {
   const toggleExpand = (key) => {
     setExpanded((prev) => ({ ...prev, [key]: !prev[key] }));
   };
-
-  const sendEmail = (e) => {
-  e.preventDefault();
-  emailjs
-    .sendForm("service_9y2osiy", "template_nwdpwk5", formRef.current, "AjQgtfBwJCkRsjpfd")
-    .then(
-      () => alert("Message sent successfully!"),
-      () => alert("Failed to send message, please try again.")
-    );
-};
-
 
   return (
     <main className="main">
@@ -87,43 +73,13 @@ export default function Portfolio() {
       {activeSection === "skills" && (
         <section className="section fade-in">
           <h2>Technical Skills</h2>
-         <div className="skills-category">
-            <h3>Languages</h3>
-            <ul className="skills-grid">
-              <li title="Python"><FaPython /></li>
-              <li title="Java"><FaJava /></li>
-              <li title="C++"><SiCplusplus /></li>
-              <li title="C#">C#</li>
-              <li title="JavaScript"><FaJsSquare /></li>
-              <li title="PHP"><SiPhp /></li>
-            </ul>
-
-            <h3>Frameworks & Tools</h3>
-            <ul className="skills-grid">
-              <li title="React.js"><FaReact /></li>
-              <li title="Node.js"><FaNodeJs /></li>
-              <li title="Spring Boot"><SiSpringboot /></li>
-              <li title="Docker"><FaDocker /></li>
-              <li title="Kubernetes"><SiKubernetes /></li>
-              <li title="Google Cloud Platform"><SiGooglecloud /></li>
-              <li title="GitHub Actions"><FaGithub /></li>
-            </ul>
-
-            <h3>Databases</h3>
-            <ul className="skills-grid">
-              <li title="MySQL"><SiMysql /></li>
-              <li title="PostgreSQL"><SiPostgresql /></li>
-              <li title="MongoDB"><SiMongodb /></li>
-              <li title="Oracle"><SiOracle /></li>
-            </ul>
-
-            <h3>Machine Learning</h3>
-            <ul className="skills-grid">
-              <li title="TensorFlow"><SiTensorflow /></li>
-              <li title="PyTorch"><SiPytorch /></li>
-              <li title="Scikit-learn"><SiScikitlearn /></li>
-            </ul>
-          </div>
+          <ul>
+            <li><strong>Languages:</strong> Python, Java, Go, C++, C#, JavaScript, PHP</li>
+            <li><strong>Frameworks & Tools:</strong> React.js, Node.js, Flask, Spring Boot, .NET Core</li>
+            <li><strong>Cloud & DevOps:</strong> Docker, Kubernetes, GCP, GitHub Actions</li>
+            <li><strong>Databases:</strong> MySQL, PostgreSQL, MongoDB, Oracle</li>
+            <li><strong>Machine Learning:</strong> TensorFlow, PyTorch, Scikit-learn, Pandas, NumPy</li>
+          </ul>
         </section>
       )}
 
@@ -197,25 +153,31 @@ export default function Portfolio() {
       {activeSection === "resume" && (
         <section className="section fade-in">
           <h2>Download My Resume</h2>
-          <a href="https://drive.google.com/file/d/1oc9edouUIOxbjWB9_FYcUXQijK4j9qtt/view?usp=sharing" download className="download-btn">
+          <a href="/Naznin_Nahar_Resume.pdf" download className="download-btn">
             Download Resume (PDF)
           </a>
         </section>
       )}
 
       {activeSection === "contact" && (
-    <section className="section fade-in">
-    <h2>Contact Me</h2>
-
-    <form ref={formRef} onSubmit={sendEmail} className="contact-form">
-      <input type="text" name="user_name" placeholder="Your Name" required className="input" />
-      <input type="email" name="user_email" placeholder="Your Email" required className="input" />
-      <textarea name="message" placeholder="Your Message" rows="4" required className="textarea" />
-      <button type="submit" className="lets-talk">Send Message</button>
-    </form>
-  </section>
-)}
-
+        <section className="section fade-in">
+          <h2>Contact Me</h2>
+          <form ref={formRef} onSubmit={(e) => {
+            e.preventDefault();
+            emailjs
+              .sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", formRef.current, "YOUR_USER_ID")
+              .then(
+                () => alert("Message sent successfully!"),
+                () => alert("Failed to send message, please try again.")
+              );
+          }} className="contact-form">
+            <input type="text" name="user_name" placeholder="Your Name" required className="input" />
+            <input type="email" name="user_email" placeholder="Your Email" required className="input" />
+            <textarea name="message" placeholder="Your Message" rows="4" required className="textarea" />
+            <button type="submit" className="lets-talk">Send Message</button>
+          </form>
+        </section>
+      )}
     </main>
   );
 }
