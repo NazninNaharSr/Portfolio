@@ -4,6 +4,14 @@ body {
   font-family: 'Roboto', sans-serif;
   transition: background 0.3s, color 0.3s;
 }
+a {
+  color: var(--text-color);
+  text-decoration: underline;
+}
+
+a:hover {
+  opacity: 0.8;
+}
 
 :root {
   --bg-color: #ffffff;
@@ -195,6 +203,36 @@ body {
 .download-btn:hover {
   background-color: #d7372f;
 }
+.skills-category {
+  margin-bottom: 2rem;
+}
+.skills-category h3 {
+  margin: 1rem 0 0.5rem;
+  font-size: 1.2rem;
+}
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin-top: 0.5rem;
+}
+
+.skills-grid li {
+  font-size: 2rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.skills-grid li:hover {
+  transform: scale(1.2);
+}
+.skills-grid li svg {
+  width: 2rem;
+  height: 2rem;
+}
+
 
 /* Responsive styles */
 @media (max-width: 768px) {
@@ -234,4 +272,5 @@ body {
   .contact-form {
     width: 100%;
   }
+
 }
