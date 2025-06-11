@@ -1,18 +1,4 @@
 /* Base styles */
-body {
-  margin: 0;
-  font-family: 'Roboto', sans-serif;
-  transition: background 0.3s, color 0.3s;
-}
-a {
-  color: var(--text-color);
-  text-decoration: underline;
-}
-
-a:hover {
-  opacity: 0.8;
-}
-
 :root {
   --bg-color: #ffffff;
   --text-color: #1a1a1a;
@@ -25,7 +11,15 @@ a:hover {
   --accent-color: #ff6b6b;
 }
 
-/* Sticky top bar */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Top bar */
 .top-bar {
   position: sticky;
   top: 0;
@@ -37,8 +31,16 @@ a:hover {
   justify-content: space-between;
   align-items: flex-start;
 }
+a {
+  color: var(--text-color);
+  text-decoration: underline;
+}
 
-/* Right-side actions */
+a:hover {
+  opacity: 0.8;
+}
+
+/* Top actions */
 .top-actions {
   display: flex;
   flex-direction: row;
@@ -85,10 +87,13 @@ a:hover {
   align-items: center;
   padding: 3rem 0;
   flex-wrap: wrap;
+  max-width: 1200px;
+  width: 100%;
 }
 
 .hero-left {
-  max-width: 500px;
+  flex: 1;
+  padding: 2rem;
 }
 
 .hero-left h1 {
@@ -106,8 +111,8 @@ a:hover {
 
 .hero-left p {
   font-size: 1rem;
-  line-height: 1.6;
   max-width: 400px;
+  line-height: 1.5;
 }
 
 .social-icons {
@@ -123,11 +128,10 @@ a:hover {
   cursor: pointer;
 }
 
-/* Avatar image */
 .hero-right {
+  flex: 1;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .avatar-img {
@@ -138,9 +142,10 @@ a:hover {
 /* Sections */
 .section {
   margin: 2rem 0;
-  padding: 1rem 0;
+  padding: 2rem;
 }
 
+/* Section fade */
 .fade-in {
   animation: fadeSlide 0.4s ease-in-out both;
 }
@@ -173,8 +178,8 @@ a:hover {
   font-size: 1rem;
 }
 
-/* Buttons */
 .lets-talk {
+  margin-top: 2rem;
   background-color: var(--accent-color);
   color: white;
   padding: 0.75rem 1.5rem;
@@ -189,6 +194,7 @@ a:hover {
   opacity: 0.85;
 }
 
+/* Resume */
 .download-btn {
   display: inline-block;
   background-color: var(--accent-color);
@@ -203,13 +209,17 @@ a:hover {
 .download-btn:hover {
   background-color: #d7372f;
 }
+
+/* Skills */
 .skills-category {
   margin-bottom: 2rem;
 }
+
 .skills-category h3 {
   margin: 1rem 0 0.5rem;
   font-size: 1.2rem;
 }
+
 .skills-grid {
   display: flex;
   flex-wrap: wrap;
@@ -228,11 +238,19 @@ a:hover {
 .skills-grid li:hover {
   transform: scale(1.2);
 }
+
 .skills-grid li svg {
   width: 2rem;
   height: 2rem;
 }
 
+/* Theme toggle */
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-color);
+}
 
 /* Responsive styles */
 @media (max-width: 768px) {
@@ -261,7 +279,8 @@ a:hover {
     padding: 2rem 1rem;
   }
 
-  .hero-left, .hero-right {
+  .hero-left,
+  .hero-right {
     max-width: 100%;
   }
 
@@ -272,5 +291,12 @@ a:hover {
   .contact-form {
     width: 100%;
   }
-
+}
+/* Footer */
+.footer {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: 2rem;
+  text-align: center;
+  border-top: 1px solid #ddd;
 }
