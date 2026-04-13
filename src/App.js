@@ -197,7 +197,7 @@ export default function Portfolio() {
       {activeSection === "resume" && (
         <section className="section fade-in">
           <h2>Download My Resume</h2> 
-          <a href="https://drive.google.com/file/d/14yVnuIzVQ9rbjvJKB1RupzEsyNhqkiMf/view?usp=sharing" download className="download-btn">
+          <a href="https://drive.google.com/file/d/1Mai7LAxoukk4HDdbWj6Cvdm2-otiM6ta/view?usp=drivesdk" download className="download-btn">
             Download Resume (PDF)
           </a>
         </section>
