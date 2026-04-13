@@ -138,9 +138,9 @@ export default function Portfolio() {
             location: 'Fremont, CA',
             dates: 'Sep 2024 – Dec 2024',
             bullets: [
-              'Built and deployed a real-time gesture recognition system using 3D CNNs and LLMs, achieving 97% accuracy on custom gesture datasets.' 
-              'Containerized the Flask REST API with Docker and deployed on GCP Compute Engine, reducing inference latency by 21%.' 
-              'Designed automated data collection pipelines with validation checkpoints to accelerate model training cycles and improve production reliability.'
+              'Built and deployed a real-time gesture recognition system using 3D CNNs and LLMs, achieving 97% accuracy on custom gesture datasets.', 
+              'Containerized the Flask REST API with Docker and deployed on GCP Compute Engine, reducing inference latency by 21%.', 
+              'Designed automated data collection pipelines with validation checkpoints to accelerate model training cycles and improve production reliability.',
             ]
           }, {
             key: 'olivine',
@@ -151,7 +151,7 @@ export default function Portfolio() {
             bullets: [
             'Engineered secure REST APIs in Spring Boot for Bangladesh's national land record system, serving 5,000+ users with 90%+ test coverage using JUnit.', 
             'Optimized database query performance, reducing response time by 62%.',
-            'Partnered with cross-functional teams to validate APIs via Postman, identifying and resolving 15+ critical issues that improved system uptime and reliability.'
+            'Partnered with cross-functional teams to validate APIs via Postman, identifying and resolving 15+ critical issues that improved system uptime and reliability.',
             ]
           }, {
             key: 'ninja',
