@@ -161,8 +161,9 @@ export default function Portfolio() {
             location: 'Cupertino, CA',
             dates: 'Mar 2023 – Present',
             bullets: [
-              'Curriculum Design: Led AI/ML bootcamps, guiding students through neural networks, ethics, and real-world projects.',
-              'Game Dev Instruction: Taught JavaScript, Unity (C#), and Roblox development concepts to beginner-level coders.'
+              'Led programming education for 200+ students across Python, JavaScript, Unity (C#), and Roblox, designing project-based curricula covering fundamentals, AI/ML concepts, and game development.' 
+              'Coached an FLL robotics team to the NorCal Official Qualifying Tournament.' 
+              'Recognized with the Best Teacher Award for exceptional mentorship and driving innovation through hands-on learning.'
             ]
           }, {
             key: 'aiub',
