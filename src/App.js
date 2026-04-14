@@ -150,9 +150,8 @@ export default function Portfolio() {
             dates: 'Feb 2021 – Oct 2021',
             bullets: [
               'Engineered secure REST APIs in Spring Boot for Bangladesh\'s national land record system, serving 5,000+ users with 90%+ test coverage using JUnit.',
-    'Optimized database query performance, reducing response time by 62%.',
-    'Partnered with cross-functional teams to validate APIs via Postman, identifying and resolving 15+ critical issues that improved system uptime and reliability.'
-  ]
+              'Optimized database query performance, reducing response time by 62%.',
+              'Partnered with cross-functional teams to validate APIs via Postman, identifying and resolving 15+ critical issues that improved system uptime and reliability.'
 
             ]
           }, {
