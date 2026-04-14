@@ -161,8 +161,8 @@ export default function Portfolio() {
             location: 'Cupertino, CA',
             dates: 'Mar 2023 – Present',
             bullets: [
-              'Led programming education for 200+ students across Python, JavaScript, Unity (C#), and Roblox, designing project-based curricula covering fundamentals, AI/ML concepts, and game development.' 
-              'Coached an FLL robotics team to the NorCal Official Qualifying Tournament.' 
+              'Led programming education for 200+ students across Python, JavaScript, Unity (C#), and Roblox, designing project-based curricula covering fundamentals, AI/ML concepts, and game development.', 
+              'Coached an FLL robotics team to the NorCal Official Qualifying Tournament.', 
               'Recognized with the Best Teacher Award for exceptional mentorship and driving innovation through hands-on learning.'
             ]
           }, {
